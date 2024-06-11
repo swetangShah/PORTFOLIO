@@ -30,8 +30,11 @@
         <div class="header-text">
           <p>Web Designer</p>
           <h1>
-            Hi, I'm <span> Swetang</span><br />
-            Shah form india
+            Hi, I'm <span> Swetang Shah</span><br />
+          i'am pasionate About<br />  
+          <div id="changingText">
+            <span>changingText</span>
+          </div>
           </h1>
         </div>
       </div>
@@ -48,7 +51,7 @@
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
             <p>
-              Hello! I’m Swetang shah, a Web developer with a passion fo
+              Hello! I’m Swetang shah, a Web developer with a passion for
               Developing. With a background in Computer Science engineering, I
               blend creativity and technical expertise to craft solutions that
               are not only functional but also visually captivating.
@@ -153,34 +156,37 @@
         <h1 class="sub-title">My Work</h1>
           <div class="work-list">
             <div class="card">
-                <img src="images/download.jpg" />
+                <img src="images/stopwatch-timer-clock-watch-flat-color-vector-28983581.jpg" />
                 <div class="layer">
-                  <h3>Social Media App</h3>
+                  <h3>Stopwatch App</h3>
                   <p>
-                    The app connects you yo the talented people around the world.
-                    download it fom play store.
+                    Developed a stopwatch application with HTML, CSS, and JavaScript, 
+                    featuring start, stop, and reset functionalities. Designed for intuitive use and optimized for 
+                    performance across devices. 
                   </p>
-                  <a href="#"><i class="fa-solid fa-up-right-from-square"></i></a>
+                  <a href="https://swetangshah.github.io/Stop__watch/"><i class="fa-solid fa-up-right-from-square"></i></a>
                 </div>
             </div>
             <div class="card">
-              <img src="images/image 1.jpg" />
+              <img src="images/images.jpg" />
               <div class="layer">
                 <h3>tic tac toe</h3>
                 <p>
-                  The app connects you yo the talented people around the world.
-                  download it fom play store.
+                  Created a classic Tic Tac Toe game using HTML, CSS, and JavaScript. 
+                  Implemented game logic for player moves, win conditions, and reset functionality. Designed 
+                  for intuitive gameplay and compatibility across devices. 
                 </p>
                 <a href="https://swetangshah.github.io/tic_tac_toe_game-/"><i class="fa-solid fa-up-right-from-square"></i></a>
               </div>
             </div>
             <div class="card">
-              <img src="images/images.jpg" />
+              <img src="images/download.jpg" />
               <div class="layer">
                 <h3>Weather App</h3>
                 <p>
-                  The app connects you yo the talented people around the world.
-                  download it fom play store.
+                  Developed a dynamic weather application with HTML, CSS, and 
+                  JavaScript, integrating third-party APIs for real-time data. Designed an intuitive, responsive 
+                  interface for optimal performance across devices, utilizing Git for efficient collaboration. 
                 </p>
                 <a href="https://swetangshah.github.io/weather_app/"><i class="fa-solid fa-up-right-from-square"></i></a>
               </div>
@@ -202,7 +208,7 @@
                       <a href="https://github.com/swetangShah"><i class="fa-brands fa-github"></i></a>
                       <a href="https://www.linkedin.com/in/swetang-shah-61385122b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fa-brands fa-linkedin"></i></a>
                   </div>
-                  <a href="images/OOPS in Java.pdf" download class="btn btn2">Download Cv</a>
+                  <a href="images/resume mee.pdf" download class="btn btn2">View resume</a>
                 </div>
                 <div class="Contact-right">
                     <form name="submit-to-google-sheet">
@@ -216,7 +222,7 @@
             </div>
         </div>
         <div class="copyright">
-          <p>Copyright ©️. Made <i class="fa-sharp fa-solid fa-heart"></i> by SwetangShah 2024</p>
+          <p>Copyright ©️. Made <i class="fa-sharp fa-solid fa-heart"></i> by SwetangShah</p>
         </div>
     </div>
 
@@ -273,6 +279,45 @@
           .catch(error => console.error('Error!', error.message))
       })
     </script>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    
+    const messages = [
+      "Coding.",
+      "Learning.",
+      "Solving complex problems.",
+      
+      
+    ];
+    let currentIndex = 0;
+    let charIndex = 0;
+    const textElement = document.getElementById('changingText');
+    const displayInterval = 100; // Interval for displaying each character
+    const changeMessageInterval = 1500; // Interval for changing the message
+
+    function displayMessage() {
+      if (charIndex < messages[currentIndex].length) {
+        textElement.textContent += messages[currentIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(displayMessage, displayInterval);
+      } else {
+        setTimeout(changeMessage, changeMessageInterval);
+      }
+    }
+
+    function changeMessage() {
+      charIndex = 0;
+      currentIndex = (currentIndex + 1) % messages.length;
+      textElement.textContent = '';
+      displayMessage();
+    }
+
+    displayMessage(); // Initial call to start the first message
+  });
+</script>
+
 
   </body>
 </html>
