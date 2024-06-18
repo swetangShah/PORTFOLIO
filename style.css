@@ -325,7 +325,8 @@ nav .fas{
 
 @media only screen and (max-width: 600px){
     #header{
-      background-image: url(images/pic-Photoroom.png-Photoroom-removebg.png);
+/*       background-image: url(images/pic-Photoroom.png-Photoroom-removebg.png); */
+      background: linear-gradient(to left, #800080, #000000);
     }
     .header-text{
         margin-top: 100%;
